@@ -1,0 +1,30 @@
+{
+   "backButton": {
+      "description": "The label for the back button",
+      "message": "Back"
+   },
+   "extDescription": {
+      "description": "The name of the extension",
+      "message": "Get the current UTC time in your browser, with time zones and locale support, and display World Clock."
+   },
+   "extName": {
+      "description": "The name of the extension",
+      "message": "NIX UTC & World Time"
+   },
+   "extShortName": {
+      "description": "The short name of the extension",
+      "message": "UTC Time"
+   },
+   "localeLabel": {
+      "description": "The label for the locale setting",
+      "message": "Locale"
+   },
+   "settingsLabel": {
+      "description": "The label for the settings page",
+      "message": "Settings"
+   },
+   "timeZoneLabel": {
+      "description": "The label for the time zone setting",
+      "message": "Time Zone"
+   }
+}
