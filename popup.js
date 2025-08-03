@@ -235,7 +235,7 @@ function updateDisplay() {
     </div>
     <div style="display: flex; align-items: center;">
       <button class="copy-btn" data-date="${utcFormat.date}" data-time="${utcFormat.time}" title="Copy to clipboard">
-        <img src="assets/icons8-copy-24.png" class="button-icon" alt="Copy">
+        <img src="icons/icons8-copy-24.png" class="button-icon" alt="Copy">
       </button>
       <div style="width: 20px;"></div>
     </div>
@@ -272,7 +272,7 @@ function updateDisplay() {
     </div>
     <div style="display: flex; align-items: center;">
       <button class="copy-btn" data-date="${localFormat.date}" data-time="${localFormat.time}" title="Copy to clipboard">
-        <img src="assets/icons8-copy-24.png" class="button-icon" alt="Copy">
+        <img src="icons/icons8-copy-24.png" class="button-icon" alt="Copy">
       </button>
       <div style="width: 20px;"></div>
     </div>
@@ -320,10 +320,10 @@ function updateDisplay() {
       </div>
       <div style="display: flex; align-items: center;">
         <button class="copy-btn" data-timezone="${timezone}" data-date="${timeFormat.date}" data-time="${timeFormat.time}" title="Copy to clipboard">
-          <img src="assets/icons8-copy-24.png" class="button-icon" alt="Copy">
+          <img src="icons/icons8-copy-24.png" class="button-icon" alt="Copy">
         </button>
         <button class="remove-btn" data-timezone="${timezone}" title="Delete timezone">
-          <img src="assets/icons8-trash-24.png" class="button-icon" alt="Delete">
+          <img src="icons/icons8-trash-24.png" class="button-icon" alt="Delete">
         </button>
       </div>
     `;
