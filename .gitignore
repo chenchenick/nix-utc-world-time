@@ -1,5 +1,8 @@
 # Dependencies
 node_modules/
+
+# Claude IDE settings
+.claude/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
