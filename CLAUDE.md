@@ -48,10 +48,8 @@ This is a Chrome extension called "WorldClock Pro" that displays UTC time and al
 
 - Root level: Core extension files (manifest, background, popup, timezone database)
 - `_locales/`: Internationalization messages for 50+ languages  
-- `assets/`: Generated build artifacts (chunks, CSS)
 - `icons/`: Extension icons
 - `node_modules/`: Dependencies (ESLint, Prettier)
-- `time_zone.csv`: Source TimezoneDB data (145k records, 6.1MB)
 
 ### External Dependencies
 
