@@ -29,7 +29,7 @@ This is a Chrome extension called "WorldClock Pro" that displays UTC time and al
 - **TimezoneDB integration**: Uses TimezoneDB CSV data for precise timezone calculations
 - **Binary search optimization**: Fast O(log n) timezone lookups
 - Persistent storage of user preferences via chrome.storage.local
-- Internationalization support with 50+ locales in _locales/ directory
+- Internationalization support with 50+ locales in \_locales/ directory
 
 ### Data Flow
 
@@ -47,7 +47,7 @@ This is a Chrome extension called "WorldClock Pro" that displays UTC time and al
 ### File Structure
 
 - Root level: Core extension files (manifest, background, popup, timezone database)
-- `_locales/`: Internationalization messages for 50+ languages  
+- `_locales/`: Internationalization messages for 50+ languages
 - `icons/`: Extension icons
 - `node_modules/`: Dependencies (ESLint, Prettier)
 

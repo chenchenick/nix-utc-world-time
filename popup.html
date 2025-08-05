@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>WorldClock Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -13,10 +19,9 @@
         width: 400px;
         background: #111;
         color: #ff9933;
-        font-family: "Courier New", monospace;
+        font-family: "IBM Plex Mono", monospace;
         padding: 10px;
       }
-
 
       .utc-display {
         margin-bottom: 15px;
@@ -158,11 +163,13 @@
       .button-icon {
         width: 16px;
         height: 16px;
-        filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+        filter: brightness(0) saturate(100%) invert(27%) sepia(51%)
+          saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
       }
 
       .copy-btn .button-icon {
-        filter: brightness(0) saturate(100%) invert(64%) sepia(23%) saturate(2476%) hue-rotate(2deg) brightness(99%) contrast(101%);
+        filter: brightness(0) saturate(100%) invert(64%) sepia(23%)
+          saturate(2476%) hue-rotate(2deg) brightness(99%) contrast(101%);
       }
 
       .controls {
@@ -199,7 +206,7 @@
         border: 1px solid #555;
         border-radius: 4px;
         color: #ff9933;
-        font-family: "Courier New", monospace;
+        font-family: "IBM Plex Mono", monospace;
         margin-bottom: 10px;
       }
 
@@ -213,7 +220,7 @@
         border: 1px solid #555;
         border-radius: 4px;
         color: #ff9933;
-        font-family: "Courier New", monospace;
+        font-family: "IBM Plex Mono", monospace;
         padding: 4px;
         margin-bottom: 10px;
       }
@@ -247,39 +254,317 @@
       .cancel-btn:hover {
         background: linear-gradient(135deg, #888 0%, #666 100%);
       }
+
+      /* Convert Time Section Styles */
+      .convert-toggle-container {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .convert-toggle-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #ff9933 0%, #cc7722 100%);
+        border: none;
+        color: #111;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        transition: all 0.2s;
+        font-family: "IBM Plex Mono", monospace;
+        box-shadow: 0 0 8px rgba(255, 153, 51, 0.4);
+      }
+
+      .convert-toggle-btn:hover {
+        background: linear-gradient(135deg, #ffaa44 0%, #dd8833 100%);
+        box-shadow: 0 0 12px rgba(255, 153, 51, 0.6);
+      }
+
+      .convert-section {
+        background: #1a1a1a;
+        border: 1px solid #444;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        padding: 12px;
+        box-shadow: 0 0 10px rgba(255, 153, 51, 0.1);
+      }
+
+      .convert-header {
+        text-align: center;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #333;
+      }
+
+      .convert-title {
+        color: #ff9933;
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: 0 0 8px rgba(255, 153, 51, 0.6);
+      }
+
+      .convert-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .convert-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .input-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .datetime-input {
+        flex: 1;
+        padding: 6px 8px;
+        background: #111;
+        border: 1px solid #555;
+        border-radius: 4px;
+        color: #ff9933;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+      }
+
+      .datetime-input::placeholder {
+        color: #666;
+        font-size: 11px;
+      }
+
+      .datetime-input:focus {
+        outline: none;
+        border-color: #ff9933;
+        box-shadow: 0 0 5px rgba(255, 153, 51, 0.3);
+      }
+
+      .paste-btn {
+        background: #333;
+        border: 1px solid #555;
+        color: #ffa500;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.2s;
+      }
+
+      .paste-btn:hover {
+        background: #444;
+        border-color: #ffa500;
+      }
+
+      .source-timezone-select {
+        flex: 1;
+        padding: 6px 8px;
+        background: #111;
+        border: 1px solid #555;
+        border-radius: 4px;
+        color: #ff9933;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+      }
+
+      .source-timezone-select:focus {
+        outline: none;
+        border-color: #ff9933;
+        box-shadow: 0 0 5px rgba(255, 153, 51, 0.3);
+      }
+
+      .convert-btn {
+        background: linear-gradient(135deg, #4444ff 0%, #3333cc 100%);
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        transition: all 0.2s;
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      .convert-btn:hover {
+        background: linear-gradient(135deg, #6666ff 0%, #4444ff 100%);
+        box-shadow: 0 0 8px rgba(68, 68, 255, 0.4);
+      }
+
+      .quick-presets {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .preset-btn {
+        background: #222;
+        border: 1px solid #444;
+        color: #ffa500;
+        padding: 4px 8px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 10px;
+        font-family: "IBM Plex Mono", monospace;
+        transition: all 0.2s;
+      }
+
+      .preset-btn:hover {
+        background: #333;
+        border-color: #ffa500;
+      }
+
+      .convert-results {
+        border-top: 1px solid #333;
+        padding-top: 12px;
+      }
+
+      .results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        color: #ffa500;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .copy-all-btn {
+        background: #333;
+        border: 1px solid #555;
+        color: #ffa500;
+        padding: 4px 8px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 10px;
+        font-family: "IBM Plex Mono", monospace;
+        transition: all 0.2s;
+      }
+
+      .copy-all-btn:hover {
+        background: #444;
+        border-color: #ffa500;
+      }
+
+      .results-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .convert-result-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 6px;
+        background: rgba(255, 153, 51, 0.05);
+        border-radius: 3px;
+        border: 1px solid rgba(255, 153, 51, 0.1);
+      }
+
+      .input-error {
+        border-color: #ff4444 !important;
+        box-shadow: 0 0 5px rgba(255, 68, 68, 0.3) !important;
+      }
+
+      .error-message {
+        color: #ff4444;
+        font-size: 10px;
+        margin-top: 4px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-      <div class="clock-row" id="utcTime"></div>
+    <!-- Convert Time Section -->
+    <div id="convertSection" class="convert-section" style="display: none">
+      <div class="convert-header">
+        <span class="convert-title">Convert Time</span>
+      </div>
 
-      <div class="clock-row" id="localTime"></div>
+      <div id="convertContent" class="convert-content">
+        <!-- Input Methods -->
+        <div class="convert-inputs">
+          <div class="input-row">
+            <input
+              type="text"
+              id="datetimeInput"
+              class="datetime-input"
+              placeholder="Enter date/time (e.g., 2024-08-04 15:30, Aug 4 3:30 PM)"
+            />
+          </div>
 
-      <ul id="timezoneList" class="timezone-list"></ul>
+          <div class="input-row">
+            <select id="sourceTimezone" class="source-timezone-select">
+              <option value="">Select source timezone</option>
+            </select>
+            <button id="convertBtn" class="convert-btn">CONVERT</button>
+          </div>
 
-      <div class="controls">
-        <button id="addTimezone" class="add-btn">+ ADD TIMEZONE</button>
-        <div
-          id="timezoneSelector"
-          class="timezone-selector"
-          style="display: none"
-        >
-          <input
-            type="text"
-            id="timezoneFilter"
-            class="search-input"
-            placeholder="Search timezones..."
-          />
-          <select
-            id="timezoneSelect"
-            class="timezone-dropdown"
-            size="6"
-          ></select>
-          <div class="action-buttons">
-            <button id="confirmAdd" class="action-btn">ADD SELECTED</button>
-            <button id="cancelAdd" class="action-btn cancel-btn">CANCEL</button>
+          <div class="quick-presets">
+            <button class="preset-btn" data-preset="now">Now</button>
+            <button class="preset-btn" data-preset="1hour-ago">1h ago</button>
+            <button class="preset-btn" data-preset="tomorrow-noon">
+              Tomorrow 12pm
+            </button>
           </div>
         </div>
+
+        <!-- Convert Results -->
+        <div id="convertResults" class="convert-results" style="display: none">
+          <div class="results-header">
+            <span>Converted Times:</span>
+            <button
+              id="copyAllResults"
+              class="copy-all-btn"
+              title="Copy all results"
+            >
+              COPY ALL
+            </button>
+          </div>
+          <div id="resultsList" class="results-list"></div>
+        </div>
       </div>
+    </div>
+
+    <!-- Toggle Convert Button -->
+    <div class="convert-toggle-container">
+      <button id="toggleConvert" class="convert-toggle-btn">
+        CONVERT TIME
+      </button>
+    </div>
+
+    <div class="clock-row" id="utcTime"></div>
+
+    <div class="clock-row" id="localTime"></div>
+
+    <ul id="timezoneList" class="timezone-list"></ul>
+
+    <div class="controls">
+      <button id="addTimezone" class="add-btn">+ ADD TIMEZONE</button>
+      <div
+        id="timezoneSelector"
+        class="timezone-selector"
+        style="display: none"
+      >
+        <input
+          type="text"
+          id="timezoneFilter"
+          class="search-input"
+          placeholder="Search timezones..."
+        />
+        <select id="timezoneSelect" class="timezone-dropdown" size="6"></select>
+        <div class="action-buttons">
+          <button id="confirmAdd" class="action-btn">ADD SELECTED</button>
+          <button id="cancelAdd" class="action-btn cancel-btn">CANCEL</button>
+        </div>
+      </div>
+    </div>
 
     <script src="timezoneDatabase.js"></script>
     <script src="popup.js"></script>
