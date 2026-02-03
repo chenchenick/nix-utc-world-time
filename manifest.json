@@ -1,10 +1,13 @@
 {
   "manifest_version": 3,
   "name": "NIX UTC & World Time",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "default_locale": "en",
   "description": "A stylish world clock with glowing Nixie tube time, real-time updates, and precise timezone handling.",
-  "permissions": ["alarms", "storage"],
+  "permissions": [
+    "alarms",
+    "storage"
+  ],
   "background": {
     "service_worker": "background.js"
   },
